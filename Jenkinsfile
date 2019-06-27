@@ -23,7 +23,7 @@ pipeline {
             steps{
                 echo "2.login oc & docker regristry"
                 
-                sh "docker login -u '${loginName}' -p '${loginPassword}' http://100.2.12.200:30002/harbor/projects"
+                sh "docker login -u '${loginName}' -p '${loginPassword}' http://10.7.12.250"
             }
 
         }
@@ -32,8 +32,8 @@ pipeline {
                 echo "3.Maven Build Stage"
                 // sh "mvn clean install -DskipTests"
                 // sh "mvn clean build -DskipTests"
-                sh "docker build -f Dockerfile -t http://10.7.12.250/harbor/projects/nana_test/python-test:latest ."
-                sh "docker push 10.7.12.250/harbor/projects/nana_test/python-test:latest"
+                sh "docker build -f Dockerfile -t http://10.7.12.250/nana_test/python-test:latest ."
+                sh "docker push docker push 10.7.12.250/nana_test/python-test:latest"
             }
         }
 

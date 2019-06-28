@@ -33,7 +33,7 @@ pipeline {
                 // sh "mvn clean install -DskipTests"
                 // sh "mvn clean build -DskipTests"
                 sh "docker build -f Dockerfile -t 10.7.12.250/nana_test/python-test:latest ."
-                sh "docker push docker push 10.7.12.250/nana_test/python-test:latest"
+                sh "docker push 10.7.12.250/nana_test/python-test:latest"
             }
         }
 

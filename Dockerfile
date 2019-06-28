@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM 10.7.12.250/longxin/loongnix-openjdk8:latest
 
 ADD ./helloworld /code
 
